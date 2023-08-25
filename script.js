@@ -1,7 +1,7 @@
 const container = document.querySelector('.container');
-const names =["Joe", "John", "Mary", "Miranda", "Liliana"];
-const occupation = ["Surgon", "Contracter", "Author", "Teacher" ];
-const prices = ["$30", "$40", "$50", "$60", "$70", "$80"];
+const names =["Joe ", "John ", "Mary ", "Miranda ", "Liliana "];
+const occupation = ["Surgon ", "Contracter ", "Author", "Teacher" ];
+const prices = ["$30 ", "$40 ", "$50 ", "$60 ", "$70 ", "$80 "];
 
 function randomPerson(){
     const nameIdx = Math.floor(Math.random()* names.length);
@@ -25,6 +25,7 @@ function mkList(){
     });
     container.innerHTML = html.join('');
 }
+mkList();
 
 setInterval( ()=> {
     const newPerson = randomPerson();
@@ -32,4 +33,3 @@ setInterval( ()=> {
     mkList();
     
 }, 1000);
-mkList();
